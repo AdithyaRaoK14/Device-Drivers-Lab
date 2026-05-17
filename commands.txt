@@ -1,0 +1,197 @@
+Note:
+In each Question search for '//cr' file to get the changes done for the question.
+Incase u find error in opening file for use_semaphore, change permissions by  -  sudo chmod 666 /dev/scull0
+
+PQ1:
+	Changes in file -
+		main.c
+		scull.h
+		sc_usr.h
+		use_semaphore.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		gcc use_semaphore.c
+		echo -n "random_text" > /dev/scull0
+		./a.out
+			Type i
+		Press Ctrl+C
+		sudo sh scull_unload
+
+
+PQ2:
+	Changes in file -
+		main.c
+		scull.h
+		sc_usr.h
+		use_semaphore.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		gcc use_semaphore.c
+		cat story.txt > /dev/scull0
+		./a.out
+			Type i
+			give the quantum to be sorted. (give either from 0-3 (since the content is between that.))
+		Press Ctrl+C
+		cat /dev/scull0
+			Now you can see the sorted quantum.
+		sudo sh scull_unload
+
+
+PQ3:
+	Changes in file -
+		main.c
+		scull.h
+		sc_usr.h
+		use_semaphore.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		gcc use_semaphore.c
+		cat text.txt > /dev/scull0
+		./a.out
+			Type i
+		Press Ctrl+C
+		sudo sh scull_unload
+
+
+PQ4:
+	Changes in file -
+			main.c
+	
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		cat text.txt > /dev/scull0
+		cat text.txt > /dev/scull1
+		cat text1.txt > /dev/scull2
+		cat text1.txt > /dev/scull3
+		cat /proc/scullmem
+		sudo sh scull_unload
+
+
+PQ5:
+	Changes in file -
+			main.c
+	
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		cat text.txt > /dev/scull0
+		cat text.txt > /dev/scull1
+		cat text1.txt > /dev/scull2
+		cat text1.txt > /dev/scull3
+		cat /proc/scullmem
+		sudo sh scull_unload
+
+
+PQ6:
+	Changes in file -
+		main.c
+		scull.h
+		sc_usr.h
+		use_semaphore.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		gcc use_semaphore.c
+		cat text.txt > /dev/scull0
+		cat /dev/scull0
+		cat /proc/scullmem 
+		./a.out
+			Type i
+		Press Ctrl+C
+		cat /dev/scull0
+		cat /proc/scullmem 
+		sudo sh scull_unload
+
+
+PQ7:
+	Changes in file -
+		main.c
+		use_semaphore.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		gcc use_semaphore.c
+		cat text.txt > /dev/scull0
+		./a.out
+			Type i
+			Give any number between 0 to 5 (0-A,1-B,2-C...)
+		Press Ctrl+C
+		sudo sh scull_unload
+
+
+PQ8:
+	Changes in file -
+		main.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		cat /proc/scullquantum
+		echo "0 8000" > /proc/scullquantum
+		echo "2 1000" > /proc/scullquantum
+		cat /proc/scullquantum
+		sudo dmesg | tail -2
+		sudo sh scull_unload
+
+
+PQ9:
+	Changes in file -
+		main.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		echo -n "ZYXWVUTSRQPONMLKJIHGFEDCBA" > /dev/scull0
+		echo -n "dcbaZYXW1234" > /dev/scull1
+		cat /proc/scullsort
+		echo "0" > /proc/scullsort
+		echo "1" > /proc/scullsort
+		cat /proc/scullsort (should show sorted data)
+		sudo dmesg | tail -2
+		sudo sh scull_unload
+
+
+PQ10:
+	Changes in file -
+		main.c
+
+	Commands -
+		make clean
+		sudo sh scull_unload
+		make
+		sudo sh scull_load
+		echo -n "ABCDEFGHIJKLMNOPQRSTUVWXYZ" > /dev/scull0
+		echo -n "HelloWorld" > /dev/scull1
+		cat /proc/scullblank
+		echo "0" > /proc/scullblank
+		echo "1" > /proc/scullblank
+		cat /proc/scullblank (should show blank data)
+		sudo dmesg | tail -2
+		sudo sh scull_unload
